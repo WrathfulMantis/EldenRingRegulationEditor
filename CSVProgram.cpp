@@ -1284,7 +1284,8 @@ public:
     }
 };
 
-void LoadAshOfWarFile()
+//Loads an Ash of War CSV file
+weaponAshFile LoadAshOfWarFile() //add option for filepath
 {
     //Variable that stores the decoded file
     weaponAshFile loadFile;
@@ -1330,8 +1331,6 @@ void LoadAshOfWarFile()
     }
 
     fileToLoad.close();
-
-    //loadFile.EnableAllWeapons();
 
     //Writing the saved csv to a file
     std::ofstream fileToWrite;
@@ -1391,11 +1390,70 @@ void LoadAshOfWarFile()
     }
     fileToWrite.close();
 
-
-
-    std::cout << "done";
+    return loadFile;
 }
 
+
+//Writing the saved csv to a file
+void WriteAshOfWarFile(weaponAshFile file) //Add option for filepath
+{
+    int entryAmount = file.ashLineVector.size();
+    std::ofstream fileToWrite;
+    fileToWrite.open("Log.txt");
+
+    //if there is an info line then print that first
+    if (file.infoLine != "")
+    {
+        fileToWrite << file.infoLine << std::endl;
+        fileToWrite.flush();
+        entryAmount -= 1;
+    }
+
+    //Print all lines to file, decoded bytes
+    for (int i = 0; i < entryAmount; i++)
+    {
+        fileToWrite << file.DecodedLine(i);
+        fileToWrite << std::endl;
+        fileToWrite.flush();
+    }
+}
+
+//Writing the saved csv to a file
+void WriteAshOfWarFile(weaponAshFile file, bool encoded) //Add option for filepath
+{
+    int entryAmount = file.ashLineVector.size();
+    std::ofstream fileToWrite;
+    fileToWrite.open("EquipParamGemOutput.txt");
+
+    //if there is an info line then print that first
+    if (file.infoLine != "")
+    {
+        fileToWrite << file.infoLine << std::endl;
+        fileToWrite.flush();
+        entryAmount -= 1;
+    }
+
+    if (encoded)
+    {
+        //Print all lines to file, encoded bytes
+        for (int i = 0; i < entryAmount; i++)
+        {
+            fileToWrite << file.EncodedLine(i);
+            fileToWrite << std::endl;
+            fileToWrite.flush();
+        }
+    }
+    else
+    {
+        //Print all lines to file, decoded bytes
+        for (int i = 0; i < entryAmount; i++)
+        {
+            fileToWrite << file.DecodedLine(i);
+            fileToWrite << std::endl;
+            fileToWrite.flush();
+        }
+    }
+}
 
 void WeaponAshEditor()
 {
@@ -1425,6 +1483,9 @@ void WeaponAshEditor()
 
 int main()
 {
-    WeaponAshEditor();
+    weaponAshFile ashFile;
+    ashFile = LoadAshOfWarFile();
+    ashFile.EnableAllWeapons();
+    WriteAshOfWarFile(ashFile, 0);
 }
 
