@@ -687,7 +687,16 @@ public:
         fullLine.append(ashLineVector.at(entry).rowName);//1
         fullLine.append(";");
 
-        fullLine.append(std::to_string(ashLineVector.at(entry).iconID)); 
+        if (ashLineVector.at(entry).storedInventoryOptions & DISABLE_NETWORK_TEST_BIT)
+        {
+            fullLine.append("1;");
+        } 
+        else
+        {
+            fullLine.append("0;");
+        }
+
+        fullLine.append(std::to_string(ashLineVector.at(entry).iconID)); //3
         fullLine.append(";");
         fullLine.append(std::to_string(int(ashLineVector.at(entry).rank))); 
         fullLine.append(";");
@@ -717,12 +726,545 @@ public:
         fullLine.append(";");
         fullLine.append(std::to_string(ashLineVector.at(entry).achievementSequentialID)); //16
         fullLine.append(";");
+
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_STANDARD_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_HEAVY_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_KEEN_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_QUALITY_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_FIRE_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_FLAMEART_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_LIGHTNING_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_SACRED_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_MAGIC_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_COLD_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_POISON_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_BLOOD_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_OCCULT_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_13_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_14_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_15_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+
         fullLine.append(std::to_string(int(ashLineVector.at(entry).rarity))); //33
         fullLine.append(";");
+
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_16_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_17_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_18_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_19_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_20_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_21_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_22_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedAffinityBytes & AFFINITY_23_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+
+
+        if (ashLineVector.at(entry).storedInventoryOptions & IS_DISCARD_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedInventoryOptions & IS_DROP_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedInventoryOptions & IS_DEPOSIT_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedInventoryOptions & IS_DROP_MULTIPLAYER_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+
         fullLine.append(std::to_string(int(ashLineVector.at(entry).showDialogCondType))); //46
         fullLine.append(";");
+
+
+        if (ashLineVector.at(entry).storedInventoryOptions & SHOW_CONDITION_TYPE_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+
         fullLine.append(std::to_string(int(ashLineVector.at(entry).defaultWeaponAffinity))); //48
         fullLine.append(";");
+
+
+        if (ashLineVector.at(entry).storedMainHandWeapons & DAGGER_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & SHORTSWORD_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & GREATSWORD_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & ULTRAGREATSWORD_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & CURVEDSWORD_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & CURVEDGREATSWORD_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & KATANA_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & TWINBLADE_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & RAPIER_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & GREATRAPIER_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & AXE_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & GREATAXE_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & HAMMER_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & GREATHAMMER_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & FLAIL_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & SPEAR_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & LARGESPEAR_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & HEAVYSPEAR_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & HALBERD_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & REAPER_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & FIST_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & CLAW_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & WHIP_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & COLLOSALWEAPON_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & SHORTBOW_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & LONGBOW_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & GREATBOW_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & CROSSBOW_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedMainHandWeapons & BALLISTA_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+
+
+        if (ashLineVector.at(entry).storedOffhandWeapons & STAFF_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedOffhandWeapons & UNUSEDCATALIST_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedOffhandWeapons & TALISMAN_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedOffhandWeapons & SMALLSHIELD_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedOffhandWeapons & MEDSHIELD_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedOffhandWeapons & GREATSHIELD_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
+        if (ashLineVector.at(entry).storedOffhandWeapons & TORCH_BIT)
+        {
+            fullLine.append("1;");
+        }
+        else
+        {
+            fullLine.append("0;");
+        }
 
         fullLine.append(std::to_string(ashLineVector.at(entry).spEffectMsgId0)); //85
         fullLine.append(";");
@@ -789,7 +1331,7 @@ void LoadAshOfWarFile()
 
     fileToLoad.close();
 
-    loadFile.EnableAllWeapons();
+    //loadFile.EnableAllWeapons();
 
     //Writing the saved csv to a file
     std::ofstream fileToWrite;
@@ -843,7 +1385,7 @@ void LoadAshOfWarFile()
         fileToWrite << loadFile.ashLineVector.at(i).MountWepTextID << ';';
         */
 
-        fileToWrite << loadFile.EncodedLine(i);
+        fileToWrite << loadFile.DecodedLine(i);
         fileToWrite << std::endl;
         fileToWrite.flush();
     }
