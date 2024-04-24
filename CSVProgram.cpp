@@ -1,10 +1,15 @@
 #include <iostream>
+#include <vector>
+#include <string>
+#include <fstream>
 #include "AshOfWar.h"
-#include "AshOfWar.cpp"
 #include "WepParam.h"
+
+
 
 int main()
 {
+    
     weaponAshFile ashFile;
 
     ashFile = LoadAshOfWarFile();
@@ -14,5 +19,8 @@ int main()
     ashFile.EnableAllWeapons();
 
     WriteAshOfWarFile(ashFile, 1);
+    
+    wepParamLine newLine;
+    std::cout << "Done";
 }
 

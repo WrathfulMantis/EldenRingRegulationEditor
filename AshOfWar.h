@@ -1,6 +1,4 @@
 #pragma once
-#include <iostream>
-
 //Bitmasks
 #pragma region
 //Affinity bools stored as bits in a 32bit unsigned int
@@ -126,7 +124,7 @@ public:
     int32_t MountWepTextID = -1; //90
 
     //Functions
-    #pragma region
+#pragma region
     void EnableAffinity(uint32_t affinity)
     {
         storedAffinityBytes = storedAffinityBytes | affinity;
@@ -228,7 +226,7 @@ public:
     {
         storedOffhandWeapons = storedOffhandWeapons | 0b01111111;
     }
-    #pragma endregion
+#pragma endregion
 };
 
 
@@ -1280,3 +1278,9 @@ public:
         return fullLine;
     }
 };
+
+weaponAshFile LoadAshOfWarFile();
+void WriteAshOfWarFile(weaponAshFile file);
+void WriteAshOfWarFile(weaponAshFile file, bool encoded);
+weaponAshFile ApplyDefaultAshNames(weaponAshFile file);
+void WeaponAshEditor();

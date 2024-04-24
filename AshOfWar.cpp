@@ -1,9 +1,10 @@
 #include <iostream>
 #include <fstream>
-#include <vector>
 #include <string>
-
+#include <vector>
 #include "AshOfWar.h"
+
+
 
 //Loads an Ash of War CSV file
 weaponAshFile LoadAshOfWarFile() //add option for filepath
