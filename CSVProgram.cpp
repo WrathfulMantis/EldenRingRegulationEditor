@@ -1,6 +1,7 @@
 #include <iostream>
 #include "AshOfWar.h"
 #include "AshOfWar.cpp"
+#include "WepParam.h"
 
 int main()
 {

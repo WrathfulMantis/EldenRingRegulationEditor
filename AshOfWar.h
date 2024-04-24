@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 
-//AshOfWar_Bitmasks
+//Bitmasks
 #pragma region
 //Affinity bools stored as bits in a 32bit unsigned int
 const uint32_t AFFINITY_STANDARD_BIT = 1 << 0; //17

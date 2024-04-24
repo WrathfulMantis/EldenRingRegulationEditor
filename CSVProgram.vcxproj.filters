@@ -26,5 +26,8 @@
     <ClInclude Include="AshOfWar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="WepParam.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
