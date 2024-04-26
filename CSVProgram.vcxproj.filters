@@ -21,6 +21,9 @@
     <ClCompile Include="AshOfWar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="WepParam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AshOfWar.h">

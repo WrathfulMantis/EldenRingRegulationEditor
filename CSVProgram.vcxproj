@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="CSVProgram.cpp" />
     <ClCompile Include="AshOfWar.cpp" />
+    <ClCompile Include="WepParam.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AshOfWar.h" />

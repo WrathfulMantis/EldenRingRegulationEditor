@@ -13,14 +13,16 @@ int main()
     weaponAshFile ashFile;
 
     ashFile = LoadAshOfWarFile();
-
     ashFile = ApplyDefaultAshNames(ashFile);
-
     ashFile.EnableAllWeapons();
 
     WriteAshOfWarFile(ashFile, 1);
     
-    wepParamLine newLine;
+    WepParamFile wepParamFile;
+
+    wepParamFile = LoadWepParamFile();
+    wepParamFile = ApplyDefaultwepParamNames(wepParamFile);
+
     std::cout << "Done";
 }
 
