@@ -18,5 +18,11 @@ Mass enabling/dissabling affinities within a file
 
 Mass enabling which weapons ashes are able to be applied to
 
+Importing wepParam csv files (Exported with Yapped)
+
+Applying default names to Ash of war files
+
+Applying default names to WepParam Files
+
 
 This is very early in development so the featurelist should improve
